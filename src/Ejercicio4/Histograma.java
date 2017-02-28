@@ -8,7 +8,7 @@ public class Histograma {
     private City unal;
 
     public Histograma() {
-        this.unal = new City(6,6);
+        this.unal = new City(8,13);
         this.joe = new Robot(this.unal,0,1,Direction.SOUTH);
     }
 
@@ -58,11 +58,67 @@ public class Histograma {
         joe.pickThing();
         d++;
     }
-    
+    joe.turnLeft();
+    joe.turnLeft();
         System.out.println("a: "+a+"\n b: "+b+"\n c: "+c+"\n d: "+d);
-         
-    
     }
    
+    public void hacerCodigo(){
+        //inicio e ida de joe/poner ball
+        for(int i=0;i<3;i++){joe.turnLeft();}
+        for(int i=0; i<d; i++){
+        joe.putThing();
+        if(i<d-1){joe.move();}
+        }
+        //regreso joe
+        for(int i=0;i<2;i++){joe.turnLeft();}
+        for(int i=0; i<d-1; i++){
+        joe.move();
+        }
+        //reubicar joe
+        for(int i=0;i<3;i++){joe.turnLeft();}
+        joe.move();
+        for(int i=0;i<3;i++){joe.turnLeft();}
+        
+        //joe en c
+        for(int i=0; i<c; i++){
+        joe.putThing();
+        if(i<c-1){joe.move();}
+        }
+        for(int i=0;i<2;i++){joe.turnLeft();}
+        for(int i=0; i<c-1; i++){
+        joe.move();
+        }
+        for(int i=0;i<3;i++){joe.turnLeft();}
+        joe.move();
+        for(int i=0;i<3;i++){joe.turnLeft();}
+        
+        //joe en b
+        for(int i=0; i<b; i++){
+        joe.putThing();
+        if(i<b-1){joe.move();}
+        }
+        for(int i=0;i<2;i++){joe.turnLeft();}
+        for(int i=0; i<b-1; i++){
+        joe.move();
+        }
+        for(int i=0;i<3;i++){joe.turnLeft();}
+        joe.move();
+        for(int i=0;i<3;i++){joe.turnLeft();}
+        //joe en a
+        for(int i=0; i<a; i++){
+        joe.putThing();
+        if(i<a-1){joe.move();}
+        }
+        for(int i=0;i<2;i++){joe.turnLeft();}
+        for(int i=0; i<a-1; i++){
+        joe.move();
+        }
+        for(int i=0;i<3;i++){joe.turnLeft();}
+        joe.move();
+        
+        for(int i=0;i<2;i++){joe.turnLeft();}
+        
+    }
     
 }
