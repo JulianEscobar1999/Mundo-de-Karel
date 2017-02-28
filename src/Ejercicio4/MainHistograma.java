@@ -8,6 +8,6 @@ public class MainHistograma {
     Histograma his = new Histograma();
     his.numeros();
     his.contar();
-        
+    his.hacerCodigo();
     }
 }
