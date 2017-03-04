@@ -122,7 +122,5 @@ public class Nuggets {
       joe.pickThing();
       joe.turnLeft();
       for(int i=0;i<2;i++){joe.move();}        
-    }
-    
-    
+    }       
 }
